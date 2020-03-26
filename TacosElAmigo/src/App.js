@@ -1,19 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
-import NavBar from './Components/navbar.js';
-import Home from './Components/home.js';
-import Menu from './Components/menu.js'
+import NavBar from './Components/navbar';
+import {BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
+
+state = {
+  showHome: true
+}
+
+toggleHomeHandler = () => {
+  const homeShowing = this.state.showHome;
+  this.setState({showHome: !homeShowing});
+}
+
   render() {
     return (
-      <div className="App">
+      <BrowserRouter>
+        <div className="App">
         <div><NavBar /></div>   
-        <div><Home /></div>  
-        <div><Menu/></div>  
-      </div>     
+      </div>    
+      </BrowserRouter>
+     
     );
   }
 }
+
+
 
 export default App;
