@@ -5,15 +5,6 @@ import {BrowserRouter} from 'react-router-dom';
 
 class App extends Component {
 
-state = {
-  showHome: true
-}
-
-toggleHomeHandler = () => {
-  const homeShowing = this.state.showHome;
-  this.setState({showHome: !homeShowing});
-}
-
   render() {
     return (
       <BrowserRouter>
@@ -25,7 +16,5 @@ toggleHomeHandler = () => {
     );
   }
 }
-
-
 
 export default App;

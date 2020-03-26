@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 class Location extends Component {
     render() {
       return (
-          <h1>I'm a menu</h1>
+          <div>
+            <h1>798 S 1st St</h1>
+            <h3>Milwaukee, WI 53204</h3>
+          </div>
+       
       );
     }
 }

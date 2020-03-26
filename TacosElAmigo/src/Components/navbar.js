@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Route, Link} from 'react-router-dom';
+import Home from './home';
 import Menu from './menu';
 import Location from './location';
 import Contact from './contact';
@@ -12,7 +13,7 @@ class NavBar extends Component {
           <header>
             <ul id="nav">
                 <li><Link to={{
-                  pathname: '/'
+                  pathname: '/home'
                 }}>Home</Link></li>
 
                 <li><Link to={{
@@ -28,7 +29,8 @@ class NavBar extends Component {
                 }}>Contact</Link></li>
             </ul>        
           </header>   
-          <Route path = "/menu"  component={Menu}/>
+          <Route path= "/home" exact component = {Home} />
+          <Route path = "/menu" exact component={Menu}/>
           <Route path = "/location" exact component ={Location} />
         <Route path = "/contact" exact component ={Contact} />
         </div>
